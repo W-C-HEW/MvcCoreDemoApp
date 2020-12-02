@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 //using System.Collections.Generic;
 //using System.Linq;
 //using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace MvcCoreApp.Models
         public int Id { get; set; }
 
         [Required]
+        [DisplayName("How to")]
         public string HowTo { get; set; }
 
         [Required]
