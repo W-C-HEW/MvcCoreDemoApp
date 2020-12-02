@@ -9,6 +9,7 @@ namespace MvcCoreApp.Data
     public interface ICommanderRepo
     {
         IEnumerable<Command> GetCommands();
+        Command GetCommandById(int id);
         void AddCommand(Command cmd);
         bool saveChanges();
     }

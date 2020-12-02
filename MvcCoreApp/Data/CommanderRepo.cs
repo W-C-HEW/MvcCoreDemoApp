@@ -19,6 +19,11 @@ namespace MvcCoreApp.Data
             return _db.Command.ToList();
         }
 
+        public Command GetCommandById(int id)
+        {
+            return _db.Command.Find(id);
+        }
+
         public void AddCommand(Command cmd)
         {
             if(cmd == null)
@@ -32,5 +37,6 @@ namespace MvcCoreApp.Data
         {
             return (_db.SaveChanges() >= 0);
         }
+
     }
 }

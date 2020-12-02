@@ -27,7 +27,10 @@ namespace MvcCoreApp.Controllers
         // GET: CommanderController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Command cmd = _repo.GetCommandById(id);
+            if (cmd == null)
+                return NotFound();
+            return View(cmd);
         }
 
         // GET: CommanderController/Create
